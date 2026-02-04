@@ -1,0 +1,61 @@
+
+# 🎙️ VoiceGraph AI
+
+**VoiceGraph AI** is a voice-controlled AI agent that automates web research and generates professional documents using **LangGraph workflows**. Simply speak your request, and the system searches, analyzes, and creates a formatted Word document — completely hands-free.
+
+---
+
+## 🚀 Features
+
+* Voice-based research automation
+* LangGraph-powered multi-step workflow
+* Automated web search and content analysis
+* Professional Word document generation
+* Natural voice responses using TTS
+
+---
+
+## 🧠 Tech Stack
+
+**LangGraph, LangChain, Groq (Llama 3.1 70B), Speech Recognition, Edge TTS, DuckDuckGo, Python-docx**
+
+---
+
+## ⚙️ Setup
+
+**Prerequisites:** Python 3.10+, microphone, internet connection, Groq API key.
+
+```bash
+git clone <repo-url>
+cd VoiceGraph-AI
+
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Mac/Linux
+
+pip install -r requirements.txt
+```
+
+Add your Groq API key inside `config.py`.
+
+Run the app:
+
+```bash
+python main.py
+```
+
+Speak your request when prompted, and the agent will research and generate a document saved in the **outputs/** folder.
+
+---
+
+## 💡 Example Commands
+
+* “Research AI trends.”
+* “Compare the best smartphones under $500.”
+* “Find the top electric cars.”
+
+---
+
+## 🎯 Use Cases
+
+Research assistance, quick documentation, hands-free task automation, and AI-powered content creation.
