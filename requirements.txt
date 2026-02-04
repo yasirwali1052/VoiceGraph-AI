@@ -1,0 +1,8 @@
+langgraph
+langchain
+langchain-groq
+ddgs
+SpeechRecognition
+edge-tts
+python-docx
+pyaudio

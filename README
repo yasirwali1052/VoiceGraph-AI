@@ -1,0 +1,178 @@
+# VoiceGraph AI
+
+A voice-controlled AI agent that automates research and document creation using LangGraph workflows. Speak your request, and the agent searches the web, analyzes results, and generates a professional document - all hands-free.
+
+## Overview
+
+VoiceGraph AI is an intelligent voice assistant that combines speech recognition, AI language models, and workflow automation to handle complex research tasks through simple voice commands.
+
+## How It Works
+
+The system follows a multi-step workflow powered by LangGraph:
+
+1. **Voice Input** - Captures your spoken request through the microphone
+2. **Plan Creation** - AI analyzes your request and creates a structured plan
+3. **Web Search** - Automatically searches the internet for relevant information
+4. **Content Analysis** - AI processes and synthesizes the search results
+5. **Document Generation** - Creates a formatted Word document with findings
+6. **Voice Confirmation** - Speaks back to confirm task completion
+
+## Key Features
+
+- **Hands-Free Operation** - Complete tasks using only voice commands
+- **Smart Workflow** - LangGraph orchestrates multi-step AI processes
+- **Web Research** - Automated searching and information gathering
+- **Document Creation** - Generates professional Word documents automatically
+- **Natural Interaction** - Conversational AI powered by Groq (Llama 3.1 70B)
+- **State Management** - Maintains context throughout the entire workflow
+
+## Technology Stack
+
+- **LangGraph** - Workflow orchestration and state management
+- **LangChain** - AI application framework
+- **Groq API** - Fast LLM inference (Llama 3.1 70B model)
+- **Speech Recognition** - Voice input processing
+- **Edge TTS** - Natural text-to-speech output
+- **DuckDuckGo** - Web search without API keys
+- **Python-docx** - Document generation
+
+## Project Structure
+
+```
+VoiceGraph AI/
+├── main.py                 # Application entry point
+├── config.py              # Configuration and API keys
+├── state.py               # State management schema
+├── graph.py               # LangGraph workflow definition
+├── nodes/
+│   ├── listen.py          # Voice input node
+│   ├── plan.py            # Task planning node
+│   ├── search.py          # Web search node
+│   ├── create_doc.py      # Document creation node
+│   └── speak.py           # Voice output node
+├── tools/
+│   ├── web_search.py      # DuckDuckGo search tool
+│   └── doc_creator.py     # Word document creator
+├── outputs/               # Generated documents folder
+└── requirements.txt       # Python dependencies
+```
+
+## Setup Instructions
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Microphone and speakers
+- Internet connection
+- Groq API key (free)
+
+### Installation
+
+1. Clone or download this project
+
+2. Create a virtual environment:
+   ```
+   python -m venv venv
+   ```
+
+3. Activate the virtual environment:
+   - Windows: `venv\Scripts\activate`
+   - Mac/Linux: `source venv/bin/activate`
+
+4. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. Install PyAudio (Windows):
+   ```
+   pip install pipwin
+   pipwin install pyaudio
+   ```
+
+6. Get your free Groq API key:
+   - Visit https://console.groq.com/
+   - Create an account
+   - Generate an API key
+
+7. Add your API key to `config.py`:
+   - Open `config.py`
+   - Replace `your_groq_api_key_here` with your actual key
+
+## Usage
+
+1. Run the application:
+   ```
+   python main.py
+   ```
+
+2. Wait for the prompt: "Listening... Speak now!"
+
+3. Clearly state your research request
+
+4. The agent will:
+   - Confirm it heard you
+   - Search the web
+   - Analyze results
+   - Create a document
+   - Tell you where the file is saved
+
+### Example Commands
+
+- "Research the top 3 electric cars under 50000 dollars"
+- "Find information about artificial intelligence trends in 2024"
+- "Compare the best smartphones under 500 dollars"
+- "Search for healthy meal prep ideas for beginners"
+
+## Output
+
+All generated documents are saved in the `outputs/` folder as Word documents (.docx) with:
+- Clear formatting
+- Research summary
+- Key findings
+- Source information
+
+## Troubleshooting
+
+**Microphone not working:**
+- Check Windows microphone permissions
+- Ensure microphone is set as default device
+- Speak clearly and close to the microphone
+
+**Voice recognition fails:**
+- Reduce background noise
+- Speak louder and more clearly
+- Check internet connection (Google Speech API requires internet)
+
+**API errors:**
+- Verify your Groq API key is correct in `config.py`
+- Check you have remaining API credits
+- Ensure internet connection is stable
+
+**Module errors:**
+- Reinstall dependencies: `pip install -r requirements.txt`
+- Make sure virtual environment is activated
+
+
+## Use Cases
+
+- Research assistance for students and professionals
+- Quick information gathering and documentation
+- Hands-free task automation
+- Content creation starter
+- Personal knowledge base building
+
+
+## License
+
+Free to use for personal and educational purposes.
+
+## Acknowledgments
+
+Built with:
+- LangChain and LangGraph frameworks
+- Groq for fast LLM inference
+- OpenAI Whisper concepts
+- Python open-source community
+
+---
